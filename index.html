@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="imege/x-icon" href="saikat.png">
+    <link rel="icon" type="imege/x-icon" href="rrrrrrr.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sakibul Islam Saikat</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -89,35 +89,108 @@
 </head>
 <body class="bg-gradient-to-br from-[#092635] via-[#1b4242] to-[#5c8374] text-white min-h-screen">
     <!-- Navigation -->
-
-    <nav class="fixed top-0 w-full z-50 glass-effect">
-        <div class="container mx-auto px-4 py-2">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold gradient-text animate-pulse-slow">
-                    Sakibul Islam Saikat
+<style>
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b6b, #dad2cd, #ffde7d, #a3de83, #6a98f0, #9d65c9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mobile-menu {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-link {
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-link:hover {
+            transform: translateX(5px);
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .hover\:bg-vibrant-purple:hover { background-color: #8b5cf6; }
+        .hover\:bg-vibrant-pink:hover { background-color: #ec4899; }
+        .hover\:bg-vibrant-blue:hover { background-color: #3b82f6; }
+        .hover\:bg-vibrant-green:hover { background-color: #10b981; }
+        .hover\:bg-vibrant-orange:hover { background-color: #f59e0b; }
+        .hover\:bg-vibrant-red:hover { background-color: #ef4444; }
+        
+        /* Custom rounded navigation container */
+        .rounded-nav-container {
+            border-radius: 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50">
+        <div class="rounded-nav-container glass-effect">
+            <div class="container mx-auto px-4 py-2">
+                <div class="flex justify-between items-center">
+                    <div class="text-2xl font-bold gradient-text animate-pulse-slow">
+                        Sakibul Islam Saikat
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex space-x-6">
+                        <button onclick="showPage('home')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-purple active">Home</button>
+                        <button onclick="showPage('about')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-pink">About</button>
+                        <button onclick="showPage('skills')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-blue">Skills</button>
+                        <button onclick="showPage('portfolio')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-green">Portfolio</button>
+                        <button onclick="showPage('resume')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-orange">Resume</button>
+                        <button onclick="showPage('contact')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-red">Contact</button>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-6">
-                    <button onclick="showPage('home')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-purple active">Home</button>
-                    <button onclick="showPage('about')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-pink">About</button>
-                    <button onclick="showPage('skills')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-blue">Skills</button>
-                    <button onclick="showPage('portfolio')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-green">Portfolio</button>
-                    <button onclick="showPage('resume')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-orange">Resume</button>
-                    <button onclick="showPage('contact')" class="nav-link px-4 py-2 rounded-full transition-all duration-300 hover:bg-vibrant-red">Contact</button>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
             </div>
         </div>
         
         <!-- Mobile Navigation -->
-        <div id="mobileMenu" class="mobile-menu md:hidden fixed top-0 left-0 w-64 h-full bg-gradient-to-b from-purple-800 to-indigo-800 z-40 p-6">
+        <div id="mobileMenu" class="mobile-menu md:hidden fixed top-0 left-0 w-64 h-full z-40 p-6 rounded-nav-container">
             <div class="flex justify-between items-center mb-8">
                 <div class="text-xl font-bold gradient-text">Menu</div>
                 <button onclick="toggleMobileMenu()" class="text-white">
@@ -136,6 +209,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- Home Page -->
     <div id="home" class="page active">
@@ -198,7 +272,7 @@
                             <div id="profileImageContainer" class="w-full h-full flex items-center justify-center">
                                 <div class="text-center">
                                   
-                                <img src="saikat-ac.png" alt="">
+                                <img src="cc.png" alt="">
                                 </div>
                             </div>
                             <input type="file" id="profileImageInput" accept="image/*" style="display: none;" onchange="handleProfileImage(this)">
